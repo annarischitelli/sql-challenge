@@ -33,12 +33,13 @@ CREATE TABLE "dept_manager"(
 -- 	PRIMARY KEY (dept_no),
 -- 	FOREIGN KEY (emp_no) references employees (emp_no)
 );
-
+--- HAVING KEY ISSUES ABOVE & BELOW !!!
 DROP TABLE dept_emp
 CREATE TABLE "dept_emp"(
 	emp_no int NOT NULL,
 	dept_no varchar NOT NULL
--- 	PRIMARY KEY (dept_no)
+-- 	PRIMARY KEY (dept_no),
+-- 	FOREIGN KEY (dept_no) references dept_manager (dept_no),
 -- 	FOREIGN KEY (emp_no) references employees (emp_no)
 );
 

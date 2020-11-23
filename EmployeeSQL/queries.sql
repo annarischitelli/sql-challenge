@@ -29,3 +29,9 @@ WHERE employees.first_name = 'Hercules' AND employees.last_name LIKE 'B%';
 SELECT employees.emp_no, employees.last_name, employees.first_name, departments.dept_name
 FROM employees, dept_emp, departments
 WHERE employees.emp_no = dept_emp.emp_no AND dept_emp.dept_no = departments.dept_no;
+
+--7. List all employees in the Sales and Development departments, including their employee number, last name, first name, and department name.
+SELECT employees.emp_no, employees.last_name, employees.first_name, departments.dept_name
+FROM employees, dept_emp, departments
+WHERE employees.emp_no = dept_emp.emp_no AND dept_emp.dept_no = departments.dept_no
+AND (departments.dept_name = 'Sales' OR departments.dept_name = 'Development');
